@@ -1,0 +1,522 @@
+
+/* =================================
+   الهوية العامة - سَنَد
+================================= */
+
+:root {
+    --green: #173f35;
+    --green-light: #285b4d;
+    --cream: #f8f6ef;
+    --white: #ffffff;
+    --gold: #c5a66b;
+    --text: #26352f;
+    --muted: #77827b;
+    --border: #e7e8df;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    direction: rtl;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* =================================
+   شريط التنقل
+================================= */
+
+.navber,
+.navbar {
+    min-height: 82px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    gap: 20px;
+}
+
+.logo {
+    color: var(--green);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* =================================
+   الأزرار
+================================= */
+
+.primary-button,
+button.primary-button {
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    background: var(--green);
+    color: white;
+    padding: 12px 25px;
+    margin-top: 12px;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    background: var(--green-light);
+    transform: translateY(-2px);
+}
+
+.cancel-project {
+    display: inline-block;
+    background: #f3eee8;
+    color: #805b4c;
+    border: 1px solid #e8dcd2;
+    border-radius: 10px;
+    padding: 11px 22px;
+    margin: 8px 5px;
+}
+
+/* =================================
+   الأقسام العامة
+================================= */
+
+.section {
+    width: 86%;
+    max-width: 1200px;
+    margin: 65px auto;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--green);
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: clamp(30px, 5vw, 48px);
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    color: var(--muted);
+}
+
+/* =================================
+   الواجهة الرئيسية
+================================= */
+
+.hero {
+    min-height: 520px;
+    padding: 90px 9%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #173f35, #285b4d);
+    color: white;
+}
+
+.hero h1,
+.hero h2 {
+    color: white;
+}
+
+.hero p {
+    color: #e3e9e3;
+    font-size: 18px;
+    max-width: 650px;
+}
+
+.hero .primary-button {
+    background: var(--gold);
+    color: #173f35;
+    font-weight: bold;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* =================================
+   الخدمات
+================================= */
+
+.services,
+.service-grid,
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.service-card,
+.service-item {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: 0.3s;
+}
+
+.service-card:hover,
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #173f3510;
+}
+
+.service-number,
+.services-number {
+    color: var(--gold);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* =================================
+   النماذج وحقول الكتابة
+================================= */
+
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    color: var(--green);
+    font-weight: bold;
+    margin: 18px 0 7px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #dfe3dc;
+    border-radius: 10px;
+    background: white;
+    color: var(--text);
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--green-light);
+    box-shadow: 0 0 0 3px #285b4d15;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.9;
+}
+
+/* تكبير مربعي التشخيص والمساعد */
+
+#details,
+#chat-input {
+    width: 100%;
+    min-height: 180px;
+    padding: 18px;
+    font-size: 16px;
+    line-height: 1.9;
+    resize: vertical;
+}
+
+/* =================================
+   التشخيص
+================================= */
+
+.diagnosis-box,
+.diagnosis-section {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 45px auto;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 35px #173f3508;
+}
+
+#diagnosis-form {
+    margin-top: 25px;
+}
+
+/* =================================
+   التقارير والنتائج
+================================= */
+
+.report-box,
+.report-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin-top: 25px;
+    border: 1px solid var(--border);
+}
+
+/* =================================
+   لوحة التحكم
+================================= */
+
+.dashboard-welcome {
+    background: linear-gradient(120deg, #173f35, #285b4d);
+    color: white;
+    padding: 45px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-welcome h1,
+.dashboard-welcome h2 {
+    color: white;
+}
+
+.dashboard-welcome p {
+    color: #e5ece6;
+}
+
+#project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 25px #173f3508;
+}
+
+.project-card h2,
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card button {
+    margin-left: 5px;
+}
+
+.empty-projects {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px dashed var(--gold);
+}
+
+.new-project-form {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 25px 0;
+    border: 1px solid var(--border);
+}
+
+/* =================================
+   صفحة المشروع
+================================= */
+
+#diagnosis-history {
+    margin-top: 20px;
+}
+
+#chat-messages {
+    min-height: 100px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#chat-messages p {
+    background: white;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 10px 0;
+}
+
+#chat-messages strong {
+    color: var(--green);
+}
+
+/* =================================
+   الملف الشخصي
+================================= */
+
+.profile-card {
+    background: white;
+    border-radius: 18px;
+    padding: 35px;
+    max-width: 750px;
+    margin: 35px auto;
+    border: 1px solid var(--border);
+}
+
+/* =================================
+   النوافذ المنبثقة
+================================= */
+
+.modal,
+.account-modal {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 15px 50px #00000020;
+}
+
+/* =================================
+   التذييل
+================================= */
+
+footer {
+    background: var(--green);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 80px;
+}
+
+footer .logo {
+    color: white;
+}
+
+footer p,
+footer small {
+    color: #e0e8e1;
+}
+
+/* =================================
+   تنسيق الجوال
+================================= */
+
+@media (max-width: 768px) {
+    .navber,
+    .navbar {
+        padding: 15px 5%;
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero {
+        padding: 65px 7%;
+        min-height: 400px;
+    }
+
+    .section {
+        width: 92%;
+        margin: 40px auto;
+    }
+
+    .dashboard-welcome {
+        padding: 28px 22px;
+    }
+
+    .diagnosis-box,
+    .diagnosis-section {
+        padding: 28px 20px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    #project-list {
+        grid-template-columns: 1fr;
+    }
+
+    #details,
+    #chat-input {
+        min-height: 160px;
+    }
+}
+
+@media (max-width: 450px) {
+    .logo {
+        font-size: 26px;
+    }
+
+    nav {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 45px 6%;
+    }
+
+    .primary-button {
+        width: 100%;
+    }
+}
+
+.hero {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(23, 63, 53, 0.15),
+            rgba(23, 63, 53, 0.88)
+        ),
+        url("images/sanad-office.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

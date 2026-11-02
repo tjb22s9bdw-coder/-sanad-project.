@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مساحة مشروعي | سَنَد</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navber">
+        <a href="dashboard.html" class="logo">سَنَد<span>.</span></a>
+        <nav>
+            <a href="dashboard.html">العودة إلى مشاريعي</a>
+            <a href="profile.html">ملفي الشخصي</a>
+        </nav>
+    </header>
+
+    <main class="section">
+
+        <div class="dashboard-welcome">
+            <span class="eyebrow">مساحة مشروعك</span>
+            <h1 id="project-name">مشروعي</h1>
+            <p id="project-type">تفاصيل مشروعك ومتابعة رحلته.</p>
+        </div>
+
+        <section class="project-card">
+            <h2>نبذة عن المشروع</h2>
+            <p id="project-description"></p>
+            <small id="project-date"></small>
+        </section>
+
+        <section class="project-card" style="margin-top:20px">
+            <h2>تشخيص احتياجات المشروع</h2>
+            <p>أخبرنا عن أبرز التحديات التي تواجه مشروعك.</p>
+
+            <form id="diagnosis-form">
+                <label for="challenge">ما أبرز تحدٍ يواجه مشروعك؟</label>
+
+                <select id="challenge" required>
+                    <option value="">اختر التحدي</option>
+                    <option>التسويق والوصول للعملاء</option>
+                    <option>الإدارة وتنظيم العمل</option>
+                    <option>المبيعات والعملاء</option>
+                    <option>الإدارة المالية</option>
+                    <option>الفريق والموظفون</option>
+                    <option>لا أعرف من أين أبدأ</option>
+                </select>
+
+                <label for="details">اشرح لنا التحدي بشكل أكبر</label>
+                <textarea id="details" rows="4"
+                    placeholder="اكتب تفاصيل التحدي هنا..."></textarea>
+
+                <button type="submit" class="primary-button">
+                    حفظ التشخيص
+                </button>
+            </form>
+        </section>
+
+        <section class="project-card" style="margin-top:20px">
+            <h2>سجل التشخيصات السابقة</h2>
+            <div id="diagnosis-history">
+                <p>لا توجد تشخيصات محفوظة حتى الآن.</p>
+            </div>
+        </section>
+
+        <section class="project-card" style="margin-top:20px">
+            <h2>🤖 مساعد سَنَد الذكي</h2>
+            <p>
+                مساحة مخصصة لأسئلتك عن مشروعك وتحدياته.
+                اكتب سؤالك وسنساعدك في الوصول إلى خطوات عملية.
+            </p>
+
+            <div id="chat-messages"
+                 style="background:#f5f7f3; padding:18px; border-radius:12px; margin:20px 0;">
+                <p>
+                    <strong>مساعد سَنَد:</strong>
+                    أهلًا بك! كيف أقدر أساعدك في تطوير مشروعك؟
+                </p>
+            </div>
+
+            <form id="chat-form">
+                <label for="chat-input">اكتب سؤالك هنا</label>
+
+                <textarea id="chat-input" rows="3"
+                    placeholder="مثلاً: كيف أزيد عدد عملاء مشروعي؟"
+                    required></textarea>
+
+                <button type="submit" class="primary-button">
+                    إرسال السؤال
+                </button>
+            </form>
+
+            <small style="display:block; margin-top:12px;">
+                النسخة الحالية تجريبية، وليست متصلة بعد بخدمة ذكاء اصطناعي حقيقية.
+            </small>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="dashboard.html" class="logo">سَنَد<span>.</span></a>
+        <p>نساند مشروعك من الفكرة إلى النمو.</p>
+        <small>© سَنَد - جميع الحقوق محفوظة 2026</small>
+    </footer>
+
+    <script src="project.js"></script>
+
+</body>
+</html>
